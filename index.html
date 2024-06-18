@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennah App</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="weather-app">
+        <header>
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="Enter a city..." required class="search-city" id="search-city">
+                <input type="submit" value="Search" class="search-button" id="search-button">
+            </form>
+        </header>
+        <main>
+            <div class="weather-app-data">
+                <div>
+                    <h1>City</h1>
+                    <p class="weather-app-details">
+                        <span id="time"> Day 00:00,</span>
+                        <span id="description">description</span>
+                        <br>
+                        Humidity: <strong id="humidity"></strong>,
+                        Wind: <strong id="windspeed"></strong>
+                    </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                    <div class="temperature-icon" id="temperature-icon">🌡</div>
+                    <div class="temperature-value" id="temperature-value">--</div>
+                    <div class="temperature-unit" id="temperature-unit">°C</div>
+                </div>
+            </div>
+            <div class="weather-forecast">
+                <div class="weather-forecast-day"></div>
+                <div class="weather-forecast-date">Mon</div>
+                <div class="weather-forecast-icon">🌤️</div>
+                <div class="weather-forecast-temperatures">
+                    <div class="weather-forecast-temperature" id="max-temperature">
+                        <strong>15°C</strong>
+                    </div>
+                    <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
+                </div>
+                <div class="weather-forecast-day"></div>
+                <div class="weather-forecast-date">Mon</div>
+                <div class="weather-forecast-icon">🌤️</div>
+                <div class="weather-forecast-temperatures">
+                    <div class="weather-forecast-temperature" id="max-temperature">
+                        <strong>15°C</strong>
+                    </div>
+                    <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
+                    <div class="weather-forecast-day"></div>
+                    <div class="weather-forecast-date">Mon</div>
+                    <div class="weather-forecast-icon">🌤️</div>
+                    <div class="weather-forecast-temperatures">
+                        <div class="weather-forecast-temperature" id="max-temperature">
+                            <strong>15°C</strong>
+                        </div>
+                        <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
+                        <div class="weather-forecast-day"></div>
+                        <div class="weather-forecast-date">Mon</div>
+                        <div class="weather-forecast-icon">🌤️</div>
+                        <div class="weather-forecast-temperatures">
+                            <div class="weather-forecast-temperature" id="max-temperature">
+                                <strong>15°C</strong>
+                            </div>
+                            <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
+                            <div class="weather-forecast-day"></div>
+                            <div class="weather-forecast-date">Mon</div>
+                            <div class="weather-forecast-icon">🌤️</div>
+                            <div class="weather-forecast-temperatures">
+                                <div class="weather-forecast-temperature" id="max-temperature">
+                                    <strong>15°C</strong>
+                                </div>
+                                <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
+        </main>
+
+        <footer>
+            This project was coded by
+            <a href="https://github.com/Jinoveva" target="_blank">Jinoveva Lopes</a>
+            and is hosted on
+            <a href="" target="_blank">Github</a>
+            and
+            <!-- come back to add Netlify link -->
+            <a href="" target="_blank">Netflify</a>
+        </footer>
+    </div>
+
+    <script src="src/index.js"></script>
+</body>
+
+</html>
