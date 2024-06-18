@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jennah App</title>
     <link rel="stylesheet" href="src/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="roboto-medium">
     <div class="weather-app">
         <header>
             <form class="search-form" id="search-form">
@@ -20,74 +20,63 @@
                 <input type="submit" value="Search" class="search-button" id="search-button">
             </form>
         </header>
+        <hr>
         <main>
             <div class="weather-app-data">
                 <div>
                     <h1>City</h1>
                     <p class="weather-app-details">
+                        <div class="top-row">
                         <span id="time"> Day 00:00,</span>
                         <span id="description">description</span>
+                        </div>
                         <br>
-                        Humidity: <strong id="humidity"></strong>,
-                        Wind: <strong id="windspeed"></strong>
+                        <div class="bottom-row">
+                        Humidity: <strong id="humidity">..</strong>,
+                        Wind: <strong id="windspeed">..</strong>
+                        </div>
                     </p>
                 </div>
                 <div class="weather-app-temperature-container">
                     <div class="temperature-icon" id="temperature-icon">🌡</div>
-                    <div class="temperature-value" id="temperature-value">--</div>
+                    <div class="temperature-value" id="temperature-value">21</div>
                     <div class="temperature-unit" id="temperature-unit">°C</div>
                 </div>
             </div>
-            <div class="weather-forecast">
-                <div class="weather-forecast-day"></div>
-                <div class="weather-forecast-date">Mon</div>
-                <div class="weather-forecast-icon">🌤️</div>
-                <div class="weather-forecast-temperatures">
-                    <div class="weather-forecast-temperature" id="max-temperature">
-                        <strong>15°C</strong>
-                    </div>
-                    <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
-                </div>
-                <div class="weather-forecast-day"></div>
-                <div class="weather-forecast-date">Mon</div>
-                <div class="weather-forecast-icon">🌤️</div>
-                <div class="weather-forecast-temperatures">
-                    <div class="weather-forecast-temperature" id="max-temperature">
-                        <strong>15°C</strong>
-                    </div>
-                    <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
-                    <div class="weather-forecast-day"></div>
-                    <div class="weather-forecast-date">Mon</div>
-                    <div class="weather-forecast-icon">🌤️</div>
-                    <div class="weather-forecast-temperatures">
-                        <div class="weather-forecast-temperature" id="max-temperature">
-                            <strong>15°C</strong>
-                        </div>
-                        <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
-                        <div class="weather-forecast-day"></div>
-                        <div class="weather-forecast-date">Mon</div>
-                        <div class="weather-forecast-icon">🌤️</div>
-                        <div class="weather-forecast-temperatures">
-                            <div class="weather-forecast-temperature" id="max-temperature">
-                                <strong>15°C</strong>
-                            </div>
-                            <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
-                            <div class="weather-forecast-day"></div>
-                            <div class="weather-forecast-date">Mon</div>
-                            <div class="weather-forecast-icon">🌤️</div>
-                            <div class="weather-forecast-temperatures">
-                                <div class="weather-forecast-temperature" id="max-temperature">
-                                    <strong>15°C</strong>
-                                </div>
-                                <div class="weather-forecast-temperature" id="min-temperature">9°C</div>
+        <div class="forecast">
+            <div class="days">
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+            </div>
+            <div class="icons">
+                <div class="icon">🌤️</div>
+                <div class="icon">🌤️</div>
+                <div class="icon">🌤️</div>
+                <div class="icon">🌤️</div>
+                <div class="icon">🌤️</div>
+            </div>
+        <div class="temperatures">
+            <div class="temperature"><span class="max-temp">20°</span> <span class="min-temp">10°</span></div>
+            <div class="temperature"><span class="max-temp">21°</span> <span class="min-temp">11°</span></div>
+            <div class="temperature"><span class="max-temp">22°</span> <span class="min-temp">12°</span></div>
+            <div class="temperature"><span class="max-temp">23°</span> <span class="min-temp">13°</span></div>
+            <div class="temperature"><span class="max-temp">24°</span> <span class="min-temp">14°</span></div>
+        </div>
+        </div>
+
         </main>
+
+        <hr>
 
         <footer>
             This project was coded by
             <a href="https://github.com/Jinoveva" target="_blank">Jinoveva Lopes</a>
-            and is hosted on
-            <a href="https://github.com/Jinoveva/Jennah-App" target="_blank">Github</a>
-            and
+            , is
+            <a href="https://github.com/Jinoveva/Jennah-App" target="_blank"> open-sourced on Github</a>
+            and hosted on
             <a href="https://jennah-app.netlify.app" target="_blank">Netflify</a>
         </footer>
     </div>
