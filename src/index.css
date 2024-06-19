@@ -1,3 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f8ff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
 .roboto-medium {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -7,55 +22,51 @@
 .weather-app {
     background: white;
     max-width: 600px;
-    max-height: 700px;
     margin: 30px auto;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
     border-radius: 16px;
     padding: 30px;
 }
-hr{
+
+hr {
     margin: 30px auto;
     opacity: 0.05;
 }
 
-body{
-    background-color: #f0f8ff;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.search-city{
-    margin: 0px;
-    padding: 15px 300px 15px 10px;
+.search-city {
+    width: 70%;
+    padding: 15px;
     border-radius: 8px;
     border: none;
-    background-color:#f0f8ff ;
+    background-color: #f0f8ff;
     font-size: 15px;
 }
 
-.search-button{
+.search-button {
     padding: 15px 30px;
     border-radius: 8px;
     border: none;
     background: #6495ed;
     color: white;
-    margin-left: 10px;
     font-size: 15px;
+    cursor: pointer;
 }
 
-h1{
+h1 {
     font-size: 40px;
     margin: 0 auto;
 }
 
-.weather-app-data, .weather-app-temperature-container {
+.weather-app-data,
+.weather-app-temperature-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
 }
 
-#humidity, #windspeed{
+#humidity,
+#windspeed {
     color: #5ad0d3;
 }
 
@@ -63,10 +74,15 @@ h1{
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.weather-forecast-day {
+    text-align: center;
+    margin: 10px;
 }
 
 .weather-forecast-date {
-    text-align: center;
     color: rgba(39, 33, 66, 0.4);
     font-size: 16px;
     line-height: 20px;
@@ -90,19 +106,17 @@ h1{
     padding: 0 10px;
 }
 
-
-.temperature-icon{
-font-size: 40px;
-margin: 25px 10px 0 0;
+.temperature-icon {
+    font-size: 40px;
+    margin: 25px 10px 0 0;
 }
 
-.temperature-value{
-font-size: 80px;
+.temperature-value {
+    font-size: 80px;
 }
 
-.temperature-unit{
+.temperature-unit {
     font-size: 30px;
-
 }
 
 .forecast {
@@ -112,44 +126,22 @@ font-size: 80px;
 }
 
 .days,
-.icons,
-.temperatures {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.day,
-.icon,
-.temperature {
-    flex: 1;
-    text-align: center;
-}
-
-.icon{
-    width: 50px;
-    height: auto;
-    font-size: 50px;
-}
-
-.temperature {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.days, .top-row, .bottom-row{
+.top-row,
+.bottom-row {
     color: #c3c1ca;
 }
 
-
-footer{
+footer {
     font-size: 14px;
     text-align: center;
     padding: 20px 0 0 0;
 }
 
-a{
+a {
     color: #6495ed;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
