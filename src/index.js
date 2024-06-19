@@ -44,14 +44,23 @@ function formatDate(date) {
 function searchCity(city) {
     let apiKey = "ft01o336fa01b0d041f3cbcd1c5dc250";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-    axios.get(apiUrl).then(refreshWeather);
+    axios.get(apiUrl)
+        .then(refreshWeather)
+        .catch(error => {
+            console.error("Error fetching weather data:", error);
+            alert("Failed to fetch weather data. Please try again.");
+        });
 }
 
 function handleSearchSubmit(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#search-city");
 
-    searchCity(searchInput.value);
+    if (searchInput.value) {
+        searchCity(searchInput.value);
+    } else {
+        alert("Please enter a city name.");
+    }
 }
 
 function formatDay(timestamp) {
@@ -64,13 +73,18 @@ function formatDay(timestamp) {
 function getForecast(city) {
     let apiKey = "b2a5adcct04b33178913oc335f405433";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-    axios(apiUrl).then(displayForecast);
+    axios.get(apiUrl)
+        .then(displayForecast)
+        .catch(error => {
+            console.error("Error fetching forecast data:", error);
+            alert("Failed to fetch forecast data. Please try again.");
+        });
 }
 
 function displayForecast(response) {
     let forecastHtml = "";
 
-    response.data.daily.forEach(function(day, index) {
+    response.data.daily.forEach(function (day, index) {
         if (index < 5) {
             forecastHtml += `
             <div class="weather-forecast-day">
@@ -93,3 +107,4 @@ function displayForecast(response) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
