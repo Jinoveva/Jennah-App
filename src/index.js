@@ -43,7 +43,7 @@ function formatDate(date) {
         seconds = `0${seconds}`;
     }
 
-    return `${day} ${hours}:${minutes}`;
+    return `${day} ${hours}:${minutes}:${seconds}`;
 }
 
 function searchCity(city) {
