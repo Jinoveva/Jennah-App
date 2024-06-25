@@ -23,6 +23,7 @@ function refreshWeather(response) {
 function formatDate(date) {
     let minutes = date.getMinutes();
     let hours = date.getHours();
+     let seconds = date.getSeconds();
     let days = [
         "Sunday",
         "Monday",
@@ -36,6 +37,10 @@ function formatDate(date) {
 
     if (minutes < 10) {
         minutes = `0${minutes}`;
+    }
+
+      if (seconds < 10) {
+        seconds = `0${seconds}`;
     }
 
     return `${day} ${hours}:${minutes}`;
